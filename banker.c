@@ -9,6 +9,10 @@
 static int n, m;
 static int *available;
 static int **maximum, **allocation, **need;
+static int total_comandos;
+static char *tipo_comando;
+static int *cliente_comando;
+static int **valores_comando;
 
 static int **aloca_matriz(int linhas, int colunas) {
     int **matriz = malloc((size_t)linhas * sizeof *matriz);
@@ -175,16 +179,15 @@ static bool converte_campos(char *linha, char separador, int *valores, int quant
     return true;
 }
 
-static bool processa_clientes(FILE *arquivo) {
+static bool conta_linhas(FILE *arquivo, const char *nome, int *total) {
     char linha[4096];
     int numero_linha = 0;
     bool viu_vazia = false;
-    n = 0;
-
+    *total = 0;
     while (fgets(linha, sizeof linha, arquivo)) {
         numero_linha++;
         if (!strchr(linha, '\n') && !feof(arquivo)) {
-            fprintf(stderr, "Erro: customer.txt, linha %d: linha longa demais\n", numero_linha);
+            fprintf(stderr, "Erro: %s, linha %d: linha longa demais\n", nome, numero_linha);
             return false;
         }
         remove_fim_de_linha(linha);
@@ -193,16 +196,23 @@ static bool processa_clientes(FILE *arquivo) {
             continue;
         }
         if (viu_vazia) {
-            fprintf(stderr, "Erro: customer.txt, linha %d: linha em branco no meio do arquivo\n", numero_linha);
+            fprintf(stderr, "Erro: %s, linha %d: linha em branco no meio do arquivo\n", nome, numero_linha);
             return false;
         }
-        n++;
+        (*total)++;
     }
-
-    if (n == 0) {
-        fprintf(stderr, "Erro: customer.txt está vazio\n");
+    if (*total == 0) {
+        fprintf(stderr, "Erro: %s está vazio\n", nome);
         return false;
     }
+    rewind(arquivo);
+    return true;
+}
+
+static bool processa_clientes(FILE *arquivo) {
+    char linha[4096];
+    if (!conta_linhas(arquivo, "customer.txt", &n))
+        return false;
 
     maximum    = aloca_matriz(n, m);
     allocation = aloca_matriz(n, m);
@@ -212,8 +222,7 @@ static bool processa_clientes(FILE *arquivo) {
         return false;
     }
 
-    rewind(arquivo);
-    numero_linha = 0;
+    int numero_linha = 0;
     int i = 0;
     while (fgets(linha, sizeof linha, arquivo)) {
         numero_linha++;
@@ -256,16 +265,98 @@ static bool le_clientes(const char *nome_arquivo) {
     return ok;
 }
 
+static bool processa_comandos(FILE *arquivo) {
+    char linha[4096];
+    if (!conta_linhas(arquivo, "commands.txt", &total_comandos))
+        return false;
+
+    tipo_comando    = malloc((size_t)total_comandos * sizeof *tipo_comando);
+    cliente_comando = malloc((size_t)total_comandos * sizeof *cliente_comando);
+    valores_comando = aloca_matriz(total_comandos, m);
+    if (!tipo_comando || !cliente_comando || !valores_comando) {
+        fprintf(stderr, "Erro: falha de memória\n");
+        return false;
+    }
+
+    int campos[m + 1];
+    int numero_linha = 0;
+    int c = 0;
+    while (fgets(linha, sizeof linha, arquivo)) {
+        numero_linha++;
+        remove_fim_de_linha(linha);
+        if (linha[0] == '\0')
+            continue;
+
+        if (strcmp(linha, "*") == 0) {
+            tipo_comando[c]    = '*';
+            cliente_comando[c] = 0;
+            c++;
+            continue;
+        }
+
+        char tipo;
+        if (strncmp(linha, "RQ ", 3) == 0)
+            tipo = 'Q';
+        else if (strncmp(linha, "RL ", 3) == 0)
+            tipo = 'L';
+        else {
+            fprintf(stderr, "Erro: commands.txt, linha %d: comando inválido \"%s\" (esperado RQ, RL ou *)\n",
+                    numero_linha, linha);
+            return false;
+        }
+
+        char *resto = linha + 3;
+        int quantidade = conta_campos(resto, ' ');
+        if (quantidade != m + 1) {
+            fprintf(stderr, "Erro: commands.txt, linha %d: %d valores, mas foram informados %d recursos na linha de comando\n",
+                    numero_linha, quantidade - 1, m);
+            return false;
+        }
+        if (!converte_campos(resto, ' ', campos, m + 1)) {
+            fprintf(stderr, "Erro: commands.txt, linha %d: formato inválido (esperado inteiros não negativos separados por um espaço)\n",
+                    numero_linha);
+            return false;
+        }
+        if (campos[0] >= n) {
+            fprintf(stderr, "Erro: commands.txt, linha %d: cliente %d não existe (há %d clientes, de 0 a %d)\n",
+                    numero_linha, campos[0], n, n - 1);
+            return false;
+        }
+
+        tipo_comando[c]    = tipo;
+        cliente_comando[c] = campos[0];
+        for (int j = 0; j < m; j++)
+            valores_comando[c][j] = campos[j + 1];
+        c++;
+    }
+    return true;
+}
+
+static bool le_comandos(const char *nome_arquivo) {
+    FILE *arquivo = fopen(nome_arquivo, "r");
+    if (!arquivo) {
+        fprintf(stderr, "Erro: não foi possível abrir %s: %s\n", nome_arquivo, strerror(errno));
+        return false;
+    }
+    bool ok = processa_comandos(arquivo);
+    fclose(arquivo);
+    return ok;
+}
+
 int main(int argc, char *argv[]) {
-    bool ok = le_argumentos(argc, argv) && le_clientes("customer.txt");
+    bool ok = le_argumentos(argc, argv)
+           && le_clientes("customer.txt")
+           && le_comandos("commands.txt");
     if (ok) {
-        printf("n = %d, m = %d\n", n, m);
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) printf("%d ", maximum[i][j]);
-            printf("| ");
-            for (int j = 0; j < m; j++) printf("%d ", allocation[i][j]);
-            printf("| ");
-            for (int j = 0; j < m; j++) printf("%d ", need[i][j]);
+        printf("n = %d, m = %d, comandos = %d\n", n, m, total_comandos);
+        for (int c = 0; c < total_comandos; c++) {
+            if (tipo_comando[c] == '*') {
+                printf("*\n");
+                continue;
+            }
+            printf("%s %d", tipo_comando[c] == 'Q' ? "RQ" : "RL", cliente_comando[c]);
+            for (int j = 0; j < m; j++)
+                printf(" %d", valores_comando[c][j]);
             printf("\n");
         }
     }
@@ -273,5 +364,8 @@ int main(int argc, char *argv[]) {
     libera_matriz(maximum);
     libera_matriz(allocation);
     libera_matriz(need);
+    free(tipo_comando);
+    free(cliente_comando);
+    libera_matriz(valores_comando);
     return ok ? 0 : 1;
 }
