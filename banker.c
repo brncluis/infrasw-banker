@@ -343,23 +343,98 @@ static bool le_comandos(const char *nome_arquivo) {
     return ok;
 }
 
+static void escreve_vetor(FILE *saida, const int *vetor) {
+    for (int j = 0; j < m; j++)
+        fprintf(saida, j == 0 ? "%d" : " %d", vetor[j]);
+}
+
+static void escreve_vetor_espacado(FILE *saida, const int *vetor) {
+    for (int j = 0; j < m; j++)
+        fprintf(saida, "%d ", vetor[j]);
+}
+
+static void formata_vetor(char *destino, const int *vetor) {
+    int posicao = 0;
+    for (int j = 0; j < m; j++)
+        posicao += sprintf(destino + posicao, "%d ", vetor[j]);
+}
+
+static void imprime_estado(FILE *saida) {
+    char maximo[12 * m + 1], alocado[12 * m + 1], falta[12 * m + 1];
+    fprintf(saida, "MAXIMUM   |   ALLOCATION  |   NEED\n");
+    for (int i = 0; i < n; i++) {
+        formata_vetor(maximo, maximum[i]);
+        formata_vetor(alocado, allocation[i]);
+        formata_vetor(falta, need[i]);
+        fprintf(saida, "%-10s|   %-12s|   %s\n", maximo, alocado, falta);
+    }
+    fprintf(saida, "AVAILABLE ");
+    escreve_vetor_espacado(saida, available);
+    fprintf(saida, "\n");
+}
+
+static void executa_comandos(FILE *saida) {
+    for (int c = 0; c < total_comandos; c++) {
+        int  cliente = cliente_comando[c];
+        int *valores = valores_comando[c];
+
+        if (tipo_comando[c] == '*') {
+            imprime_estado(saida);
+            continue;
+        }
+
+        if (tipo_comando[c] == 'L') {
+            if (release_resources(cliente, valores) == 0) {
+                fprintf(saida, "Release from customer %d the resources ", cliente);
+                escreve_vetor(saida, valores);
+            } else {
+                fprintf(saida, "The customer %d release ", cliente);
+                escreve_vetor(saida, valores);
+                fprintf(saida, " was denied because exceed its allocation");
+            }
+            fprintf(saida, "\n");
+            continue;
+        }
+
+        int resultado = request_resources(cliente, valores);
+        if (resultado == 0) {
+            fprintf(saida, "Allocate to customer %d the resources ", cliente);
+            escreve_vetor(saida, valores);
+        } else if (resultado == -1) {
+            fprintf(saida, "The customer %d request ", cliente);
+            escreve_vetor(saida, valores);
+            fprintf(saida, " was denied because exceed its maximum allocation");
+        } else if (resultado == -2) {
+            fprintf(saida, "The resources ");
+            escreve_vetor_espacado(saida, available);
+            fprintf(saida, "are not enough to customer %d request ", cliente);
+            escreve_vetor_espacado(saida, valores);
+        } else {
+            fprintf(saida, "The customer %d request ", cliente);
+            escreve_vetor(saida, valores);
+            fprintf(saida, " was denied because result in an unsafe state");
+        }
+        fprintf(saida, "\n");
+    }
+}
+
 int main(int argc, char *argv[]) {
+    remove("result.txt");
     bool ok = le_argumentos(argc, argv)
            && le_clientes("customer.txt")
            && le_comandos("commands.txt");
+
     if (ok) {
-        printf("n = %d, m = %d, comandos = %d\n", n, m, total_comandos);
-        for (int c = 0; c < total_comandos; c++) {
-            if (tipo_comando[c] == '*') {
-                printf("*\n");
-                continue;
-            }
-            printf("%s %d", tipo_comando[c] == 'Q' ? "RQ" : "RL", cliente_comando[c]);
-            for (int j = 0; j < m; j++)
-                printf(" %d", valores_comando[c][j]);
-            printf("\n");
+        FILE *saida = fopen("result.txt", "w");
+        if (!saida) {
+            fprintf(stderr, "Erro: não foi possível criar result.txt: %s\n", strerror(errno));
+            ok = false;
+        } else {
+            executa_comandos(saida);
+            fclose(saida);
         }
     }
+
     free(available);
     libera_matriz(maximum);
     libera_matriz(allocation);
