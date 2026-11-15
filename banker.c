@@ -100,6 +100,20 @@ int request_resources(int customer_num, int request[]) {
     return 0;
 }
 
+int release_resources(int customer_num, int release[]) {
+    for (int j = 0; j < m; j++)
+        if (release[j] > allocation[customer_num][j])
+            return -1;
+
+    for (int j = 0; j < m; j++) {
+        allocation[customer_num][j] -= release[j];
+        need[customer_num][j]       += release[j];
+        available[j]                += release[j];
+    }
+
+    return 0;
+}
+
 int main(void) {
     n = 5;
     m = 3;
@@ -108,25 +122,36 @@ int main(void) {
     allocation = aloca_matriz(n, m);
     need       = aloca_matriz(n, m);
     if (!available || !maximum || !allocation || !need) {
-        fprintf(stderr, "Erro: falha de memoria\n");
+        fprintf(stderr, "Erro: falha de memória\n");
         return 1;
     }
 
-    int aloc[5][3] = {{0,1,0}, {2,0,0}, {3,0,2}, {2,1,1}, {0,0,2}};
-    int nec[5][3]  = {{7,4,3}, {1,2,2}, {6,0,0}, {0,1,1}, {4,3,1}};
+    int aloc[5][3] = {{0,2,1}, {2,0,0}, {3,0,2}, {0,0,0}, {0,0,2}};
+    int nec[5][3]  = {{7,3,2}, {1,2,2}, {6,0,0}, {2,2,2}, {4,3,1}};
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++) {
             allocation[i][j] = aloc[i][j];
             need[i][j]       = nec[i][j];
         }
-    available[0] = 3; available[1] = 3; available[2] = 2;
+    available[0] = 5; available[1] = 3; available[2] = 2;
 
-    int rq4[] = {4,0,0}, rq1[] = {1,0,2}, rq0[] = {0,2,0}, rq2[] = {0,1,0};
-    printf("RQ 4 4 0 0 (esperado -2): %d\n", request_resources(4, rq4));
-    printf("RQ 1 1 0 2 (esperado  0): %d\n", request_resources(1, rq1));
-    printf("RQ 0 0 2 0 (esperado -3): %d\n", request_resources(0, rq0));
-    printf("RQ 2 0 1 0 (esperado -1): %d\n", request_resources(2, rq2));
-    printf("available final esperado 2 3 0): %d %d %d\n",
+    int rl_invalido[] = {0,1,5}, rl_ok[] = {0,1,1}, rl_zero[] = {0,0,0};
+    int rq3[] = {2,1,1};
+
+    printf("RL 0 0 1 5 (esperado -1): %d\n", release_resources(0, rl_invalido));
+    printf("allocation[0] intacto (esperado 0 2 1): %d %d %d\n",
+           allocation[0][0], allocation[0][1], allocation[0][2]);
+
+    printf("RL 0 0 1 1 (esperado  0): %d\n", release_resources(0, rl_ok));
+    printf("allocation[0] (esperado 0 1 0): %d %d %d\n",
+           allocation[0][0], allocation[0][1], allocation[0][2]);
+    printf("need[0] (esperado 7 4 3): %d %d %d\n",
+           need[0][0], need[0][1], need[0][2]);
+
+    printf("RL 0 0 0 0 (esperado  0): %d\n", release_resources(0, rl_zero));
+
+    printf("RQ 3 2 1 1 (esperado  0): %d\n", request_resources(3, rq3));
+    printf("available (esperado 3 3 2): %d %d %d\n",
            available[0], available[1], available[2]);
 
     free(available);
