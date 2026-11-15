@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <errno.h>
+#include <limits.h>
 
 static int n, m;
 static int *available;
@@ -112,6 +114,35 @@ int release_resources(int customer_num, int release[]) {
     }
 
     return 0;
+}
+
+static bool converte_inteiro(const char *texto, int *valor) {
+    char *fim;
+    errno = 0;
+    long numero = strtol(texto, &fim, 10);
+    if (fim == texto || *fim != '\0' || errno == ERANGE || numero < 0 || numero > INT_MAX)
+        return false;
+    *valor = (int)numero;
+    return true;
+}
+
+static bool le_argumentos(int argc, char *argv[]) {
+    if (argc < 2) {
+        fprintf(stderr, "Erro: informe o número de instâncias de cada recurso. Uso: ./banker <instancias...>\n");
+        return false;
+    }
+    m = argc - 1;
+    available = malloc((size_t)m * sizeof *available);
+    if (!available) {
+        fprintf(stderr, "Erro: falha de memória\n");
+        return false;
+    }
+    for (int j = 0; j < m; j++)
+        if (!converte_inteiro(argv[j + 1], &available[j])) {
+            fprintf(stderr, "Erro: argumento inválido \"%s\": deve ser um inteiro entre 0 e %d\n", argv[j + 1], INT_MAX);
+            return false;
+        }
+    return true;
 }
 
 int main(void) {
