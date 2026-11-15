@@ -1,0 +1,4 @@
+banker
+*.o
+result.txt
+*.tar
