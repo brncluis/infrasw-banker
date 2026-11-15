@@ -73,6 +73,33 @@ static bool estado_seguro(void) {
     return seguro;
 }
 
+int request_resources(int customer_num, int request[]) {
+    for (int j = 0; j < m; j++)
+        if (request[j] > need[customer_num][j])
+            return -1;
+
+    for (int j = 0; j < m; j++)
+        if (request[j] > available[j])
+            return -2;
+
+    for (int j = 0; j < m; j++) {
+        available[j]                -= request[j];
+        allocation[customer_num][j] += request[j];
+        need[customer_num][j]       -= request[j];
+    }
+
+    if (!estado_seguro()) {
+        for (int j = 0; j < m; j++) {
+            available[j]                += request[j];
+            allocation[customer_num][j] -= request[j];
+            need[customer_num][j]       += request[j];
+        }
+        return -3;
+    }
+
+    return 0;
+}
+
 int main(void) {
     n = 5;
     m = 3;
@@ -85,23 +112,21 @@ int main(void) {
         return 1;
     }
 
-    int aloc[5][3] = {{0,1,0}, {3,0,2}, {3,0,2}, {2,1,1}, {0,0,2}};
-    int nec[5][3]  = {{7,4,3}, {0,2,0}, {6,0,0}, {0,1,1}, {4,3,1}};
+    int aloc[5][3] = {{0,1,0}, {2,0,0}, {3,0,2}, {2,1,1}, {0,0,2}};
+    int nec[5][3]  = {{7,4,3}, {1,2,2}, {6,0,0}, {0,1,1}, {4,3,1}};
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++) {
             allocation[i][j] = aloc[i][j];
             need[i][j]       = nec[i][j];
         }
-    available[0] = 2; available[1] = 3; available[2] = 0;
+    available[0] = 3; available[1] = 3; available[2] = 2;
 
-    printf("Comando 9  (esperado 1): %d\n", estado_seguro());
-
-    allocation[0][1] = 3;
-    need[0][1]       = 2;
-    available[1]     = 1;
-
-    printf("Comando 10 (esperado 0): %d\n", estado_seguro());
-    printf("available intacto (esperado 2 1 0): %d %d %d\n",
+    int rq4[] = {4,0,0}, rq1[] = {1,0,2}, rq0[] = {0,2,0}, rq2[] = {0,1,0};
+    printf("RQ 4 4 0 0 (esperado -2): %d\n", request_resources(4, rq4));
+    printf("RQ 1 1 0 2 (esperado  0): %d\n", request_resources(1, rq1));
+    printf("RQ 0 0 2 0 (esperado -3): %d\n", request_resources(0, rq0));
+    printf("RQ 2 0 1 0 (esperado -1): %d\n", request_resources(2, rq2));
+    printf("available final esperado 2 3 0): %d %d %d\n",
            available[0], available[1], available[2]);
 
     free(available);
