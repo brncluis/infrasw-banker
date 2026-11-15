@@ -3,6 +3,8 @@
 #include <stdbool.h>
 #include <errno.h>
 #include <limits.h>
+#include <string.h>
+#include <ctype.h>
 
 static int n, m;
 static int *available;
@@ -117,10 +119,12 @@ int release_resources(int customer_num, int release[]) {
 }
 
 static bool converte_inteiro(const char *texto, int *valor) {
+    if (!isdigit((unsigned char)texto[0]))
+        return false;
     char *fim;
     errno = 0;
     long numero = strtol(texto, &fim, 10);
-    if (fim == texto || *fim != '\0' || errno == ERANGE || numero < 0 || numero > INT_MAX)
+    if (*fim != '\0' || errno == ERANGE || numero > INT_MAX)
         return false;
     *valor = (int)numero;
     return true;
@@ -145,49 +149,129 @@ static bool le_argumentos(int argc, char *argv[]) {
     return true;
 }
 
-int main(void) {
-    n = 5;
-    m = 3;
-    available  = malloc((size_t)m * sizeof *available);
+static void remove_fim_de_linha(char *linha) {
+    linha[strcspn(linha, "\r\n")] = '\0';
+}
+
+static int conta_campos(const char *linha, char separador) {
+    int total = 1;
+    for (; *linha; linha++)
+        if (*linha == separador)
+            total++;
+    return total;
+}
+
+static bool converte_campos(char *linha, char separador, int *valores, int quantidade) {
+    char *inicio = linha;
+    for (int j = 0; j < quantidade; j++) {
+        char *sep = strchr(inicio, separador);
+        if (sep)
+            *sep = '\0';
+        if (!converte_inteiro(inicio, &valores[j]))
+            return false;
+        if (sep)
+            inicio = sep + 1;
+    }
+    return true;
+}
+
+static bool processa_clientes(FILE *arquivo) {
+    char linha[4096];
+    int numero_linha = 0;
+    bool viu_vazia = false;
+    n = 0;
+
+    while (fgets(linha, sizeof linha, arquivo)) {
+        numero_linha++;
+        if (!strchr(linha, '\n') && !feof(arquivo)) {
+            fprintf(stderr, "Erro: customer.txt, linha %d: linha longa demais\n", numero_linha);
+            return false;
+        }
+        remove_fim_de_linha(linha);
+        if (linha[0] == '\0') {
+            viu_vazia = true;
+            continue;
+        }
+        if (viu_vazia) {
+            fprintf(stderr, "Erro: customer.txt, linha %d: linha em branco no meio do arquivo\n", numero_linha);
+            return false;
+        }
+        n++;
+    }
+
+    if (n == 0) {
+        fprintf(stderr, "Erro: customer.txt está vazio\n");
+        return false;
+    }
+
     maximum    = aloca_matriz(n, m);
     allocation = aloca_matriz(n, m);
     need       = aloca_matriz(n, m);
-    if (!available || !maximum || !allocation || !need) {
+    if (!maximum || !allocation || !need) {
         fprintf(stderr, "Erro: falha de memória\n");
-        return 1;
+        return false;
     }
 
-    int aloc[5][3] = {{0,2,1}, {2,0,0}, {3,0,2}, {0,0,0}, {0,0,2}};
-    int nec[5][3]  = {{7,3,2}, {1,2,2}, {6,0,0}, {2,2,2}, {4,3,1}};
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < m; j++) {
-            allocation[i][j] = aloc[i][j];
-            need[i][j]       = nec[i][j];
+    rewind(arquivo);
+    numero_linha = 0;
+    int i = 0;
+    while (fgets(linha, sizeof linha, arquivo)) {
+        numero_linha++;
+        remove_fim_de_linha(linha);
+        if (linha[0] == '\0')
+            continue;
+
+        int campos = conta_campos(linha, ',');
+        if (campos != m) {
+            fprintf(stderr, "Erro: customer.txt, linha %d: %d valores, mas foram informados %d recursos na linha de comando\n",
+                    numero_linha, campos, m);
+            return false;
         }
-    available[0] = 5; available[1] = 3; available[2] = 2;
+        if (!converte_campos(linha, ',', maximum[i], m)) {
+            fprintf(stderr, "Erro: customer.txt, linha %d: formato inválido (esperado inteiros não negativos separados por vírgula)\n",
+                    numero_linha);
+            return false;
+        }
+        for (int j = 0; j < m; j++) {
+            if (maximum[i][j] > available[j]) {
+                fprintf(stderr, "Erro: customer.txt, linha %d: máximo %d do recurso %d excede o total do sistema (%d)\n",
+                        numero_linha, maximum[i][j], j, available[j]);
+                return false;
+            }
+            need[i][j] = maximum[i][j];
+        }
+        i++;
+    }
+    return true;
+}
 
-    int rl_invalido[] = {0,1,5}, rl_ok[] = {0,1,1}, rl_zero[] = {0,0,0};
-    int rq3[] = {2,1,1};
+static bool le_clientes(const char *nome_arquivo) {
+    FILE *arquivo = fopen(nome_arquivo, "r");
+    if (!arquivo) {
+        fprintf(stderr, "Erro: não foi possível abrir %s: %s\n", nome_arquivo, strerror(errno));
+        return false;
+    }
+    bool ok = processa_clientes(arquivo);
+    fclose(arquivo);
+    return ok;
+}
 
-    printf("RL 0 0 1 5 (esperado -1): %d\n", release_resources(0, rl_invalido));
-    printf("allocation[0] intacto (esperado 0 2 1): %d %d %d\n",
-           allocation[0][0], allocation[0][1], allocation[0][2]);
-
-    printf("RL 0 0 1 1 (esperado  0): %d\n", release_resources(0, rl_ok));
-    printf("allocation[0] (esperado 0 1 0): %d %d %d\n",
-           allocation[0][0], allocation[0][1], allocation[0][2]);
-    printf("need[0] (esperado 7 4 3): %d %d %d\n",
-           need[0][0], need[0][1], need[0][2]);
-
-    printf("RL 0 0 0 0 (esperado  0): %d\n", release_resources(0, rl_zero));
-
-    printf("RQ 3 2 1 1 (esperado  0): %d\n", request_resources(3, rq3));
-    printf("available (esperado 3 3 2): %d %d %d\n",
-           available[0], available[1], available[2]);
-
+int main(int argc, char *argv[]) {
+    bool ok = le_argumentos(argc, argv) && le_clientes("customer.txt");
+    if (ok) {
+        printf("n = %d, m = %d\n", n, m);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) printf("%d ", maximum[i][j]);
+            printf("| ");
+            for (int j = 0; j < m; j++) printf("%d ", allocation[i][j]);
+            printf("| ");
+            for (int j = 0; j < m; j++) printf("%d ", need[i][j]);
+            printf("\n");
+        }
+    }
     free(available);
     libera_matriz(maximum);
     libera_matriz(allocation);
     libera_matriz(need);
-    return 0;
+    return ok ? 0 : 1;
 }
