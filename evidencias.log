@@ -1,0 +1,478 @@
+Script started on 2026-11-15 14:50:39-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="142" LINES="19"]
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ g[Knma[K[K[Kmake
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker 
+[?2004l]133;C\]666;vte.shell.preexec!\teste[0][0] = 0 (esperado 0)
+teste[1][2] = 7 (esperado 7)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git ad d[K[Kd .[Kna[K[Kbna[K[Kanker.c 
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git commit -m "alocação fdi[K[K[Kdinamica de matrizxes[K[K[Kes"
+[?2004l]133;C\]666;vte.shell.preexec!\[main 4387fd5] alocação dinamica de matrizes
+ 1 file changed, 35 insertions(+)
+ create mode 100644 banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git push
+[?2004l]133;C\]666;vte.shell.preexec!\Enumerating objects: 4, done.
+Counting objects:  25% (1/4)Counting objects:  50% (2/4)Counting objects:  75% (3/4)Counting objects: 100% (4/4)Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 655 bytes | 655.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/brncluis/infrasw-banker.git
+   47afcd9..4387fd5  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make[K[K[K[Kmna[K[Kake
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ .b[K[K./banker 
+[?2004l]133;C\]666;vte.shell.preexec!\Comando 9  (esperado 1): 1
+Comando 10 (esperado 0): 0
+available intacto (esperado 2 1 0): 2 1 0
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ GIT [K[K[K[Kgit commit -m "estado_seguro: algoritmo de segurança citado no livro, se[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdo[K[Kdo libvr[K[K[Kvro, se[K[Kcom uns testes"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit add banker.c 
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgit commit -m "estado_seguro: algoritmo de segurança do livro, com uns testes"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "estado_seguro: algoritmo de segurança do livro, com uns testes"
+[?2004l]133;C\]666;vte.shell.preexec!\[main 3ab653c] estado_seguro: algoritmo de segurança do livro, com uns testes
+ 1 file changed, 84 insertions(+), 7 deletions(-)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git push
+[?2004l]133;C\]666;vte.shell.preexec!\Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 1.12 KiB | 1.12 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/brncluis/infrasw-banker.git
+   4387fd5..3ab653c  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgit status[27mgit status
+[?2004l]133;C\]666;vte.shell.preexec!\On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mevidencias.log[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgit status[27m[1Pgit statu[K[K[K[K[K[K[K[K[K[7mgit status[27m[10@git status[C[C[C[C[C[C[C[C[C[C[1Pgit statu][K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit
+[?2004l]133;C\]666;vte.shell.preexec!\exit
+
+Script done on 2026-11-15 16:13:10-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-15 16:13:13-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="142" LINES="19"]
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker 
+[?2004l]133;C\]666;vte.shell.preexec!\Comando 9  (esperado 1): 1
+Comando 10 (esperado 0): 0
+available intacto (esperado 2 1 0): 2 1 0
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\make: 'banker' is up to date.
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker 
+[?2004l]133;C\]666;vte.shell.preexec!\Comando 9  (esperado 1): 1
+Comando 10 (esperado 0): 0
+available intacto (esperado 2 1 0): 2 1 0
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker 
+[?2004l]133;C\]666;vte.shell.preexec!\Comando 9  (esperado 1): 1
+Comando 10 (esperado 0): 0
+available intacto (esperado 2 1 0): 2 1 0
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgrep -n "request_resources" banker.c[27mgrep -n "request_resources" banker.c
+[?2004l]133;C\]666;vte.shell.preexec!\[32m[K76[m[K[36m[K:[m[Kint [01;31m[Krequest_resources[m[K(int customer_num, int request[]) {
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make ccler[K[K[K[Ke[Klean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ .?[K/banker 
+[?2004l]133;C\]666;vte.shell.preexec!\RQ 4 4 0 0 (esperado -2): -2
+RQ 1 1 0 2 (esperado  0): 0
+RQ 0 0 2 0 (esperado -3): -3
+RQ 2 0 1 0 (esperado -1): -1
+available final esperado 2 3 0): 2 3 0
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git add banker.c 
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git commit -m "request_resourcer[Ks algoritmo de requisicao com o rollc[Kbakc"[K[K[Kck"
+[?2004l]133;C\]666;vte.shell.preexec!\[main 0f5da2a] request_resources algoritmo de requisicao com o rollback
+ 1 file changed, 37 insertions(+), 12 deletions(-)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git pyu[K[Kush
+[?2004l]133;C\]666;vte.shell.preexec!\Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 700 bytes | 700.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/brncluis/infrasw-banker.git
+   3ab653c..0f5da2a  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ .,[K[K.[Kmake clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker 
+[?2004l]133;C\]666;vte.shell.preexec!\RL 0 0 1 5 (esperado -1): -1
+allocation[0] intacto (esperado 0 2 1): 0 2 1
+RL 0 0 1 1 (esperado  0): 0
+allocation[0] (esperado 0 1 0): 0 1 0
+need[0] (esperado 7 4 3): 7 4 3
+RL 0 0 0 0 (esperado  0): 0
+RQ 3 2 1 1 (esperado  0): 0
+available (esperado 3 3 2): 3 3 2
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgit add banker.c[27m
+[7mgit commit -m "release_resources: devolução atômica com validação"[27m
+[7mgit push[27m[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git add banker.c
+git commit -m "release_resources: devolução atômica com validação"
+[1Pgit pus[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[Kao[K[K[Kcao"
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\[main faa1518] release_resources: devolução atômica com validacao
+ 1 file changed, 36 insertions(+), 11 deletions(-)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git push
+[?2004l]133;C\]666;vte.shell.preexec!\Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 736 bytes | 736.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/brncluis/infrasw-banker.git
+   0f5da2a..faa1518  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+[01m[Kbanker.c:24:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Klibera_matriz[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+   24 | static void [01;35m[Klibera_matriz[m[K(int **matriz) {
+      |             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[Kbanker.c:11:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kaloca_matriz[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+   11 | static int **[01;35m[Kaloca_matriz[m[K(int linhas, int colunas) {
+      |              [01;35m[K^~~~~~~~~~~~[m[K
+[01m[Kbanker.c:9:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kmaximum[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+    9 | static int **[01;35m[Kmaximum[m[K, **allocation, **need;
+      |              [01;35m[K^~~~~~~[m[K
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+[01m[Kbanker.c:24:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Klibera_matriz[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+   24 | static void [01;35m[Klibera_matriz[m[K(int **matriz) {
+      |             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[Kbanker.c:11:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kaloca_matriz[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+   11 | static int **[01;35m[Kaloca_matriz[m[K(int linhas, int colunas) {
+      |              [01;35m[K^~~~~~~~~~~~[m[K
+[01m[Kbanker.c:9:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kmaximum[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+    9 | static int **[01;35m[Kmaximum[m[K, **allocation, **need;
+      |              [01;35m[K^~~~~~~[m[K
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker 
+[?2004l]133;C\]666;vte.shell.preexec!\Erro: informe o número de instâncias de cada recurso. Uso: ./banker <instancias...>
+]666;vte.shell.postexec=1\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker 20 =[K-3 20
+[?2004l]133;C\]666;vte.shell.preexec!\Erro: argumento inválido "-3": deve ser um inteiro não negativo
+]666;vte.shell.postexec=1\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ,[K.[K./banker 00[K 0 0
+[?2004l]133;C\]666;vte.shell.preexec!\m = 3, available = 0 0 0
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker a b c
+[?2004l]133;C\]666;vte.shell.preexec!\Erro: argumento inválido "a": deve ser um inteiro não negativo
+]666;vte.shell.postexec=1\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mmake[27m
+[7m./banker 10 5 7[27m
+[7m./banker[27m
+[7m./banker 10 abc 7[27m
+[7m./banker 10 -5 7[27m
+[7m./banker 10 15x 7[27m
+[7m./banker 10 0 7[27m
+[7m./banker 99999999999 5 7[27m[A[A[A[A[A[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+./banker 10 5 7
+./banker
+./banker 10 abc 7
+./banker 10 -5 7
+./banker 10 15x 7
+./banker 10 0 7
+./banker 99999999999 5 7
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+[01m[Kbanker.c:24:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Klibera_matriz[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+   24 | static void [01;35m[Klibera_matriz[m[K(int **matriz) {
+      |             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[Kbanker.c:11:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kaloca_matriz[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+   11 | static int **[01;35m[Kaloca_matriz[m[K(int linhas, int colunas) {
+      |              [01;35m[K^~~~~~~~~~~~[m[K
+[01m[Kbanker.c:9:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kmaximum[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+    9 | static int **[01;35m[Kmaximum[m[K, **allocation, **need;
+      |              [01;35m[K^~~~~~~[m[K
+]133;C\]666;vte.shell.preexec!\m = 3, available = 10 5 7
+]133;C\]666;vte.shell.preexec!\Erro: informe o número de instâncias de cada recurso. Uso: ./banker <instancias...>
+]133;C\]666;vte.shell.preexec!\Erro: argumento inválido "abc": deve ser um inteiro não negativo
+]133;C\]666;vte.shell.preexec!\Erro: argumento inválido "-5": deve ser um inteiro não negativo
+]133;C\]666;vte.shell.preexec!\Erro: argumento inválido "15x": deve ser um inteiro não negativo
+]133;C\]666;vte.shell.preexec!\m = 3, available = 10 0 7
+]133;C\]666;vte.shell.preexec!\Erro: argumento inválido "99999999999": deve ser um inteiro não negativo
+]666;vte.shell.postexec=1\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+[01m[Kbanker.c:129:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kle_argumentos[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+  129 | static bool [01;35m[Kle_argumentos[m[K(int argc, char *argv[]) {
+      |             [01;35m[K^~~~~~~~~~~~~[m[K
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7m./banker 10 abc 7[27m./banker 10 abc 7
+[?2004l]133;C\]666;vte.shell.preexec!\RL 0 0 1 5 (esperado -1): -1
+allocation[0] intacto (esperado 0 2 1): 0 2 1
+RL 0 0 1 1 (esperado  0): 0
+allocation[0] (esperado 0 1 0): 0 1 0
+need[0] (esperado 7 4 3): 7 4 3
+RL 0 0 0 0 (esperado  0): 0
+RQ 3 2 1 1 (esperado  0): 0
+available (esperado 3 3 2): 3 3 2
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+[01m[Kbanker.c:24:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Klibera_matriz[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+   24 | static void [01;35m[Klibera_matriz[m[K(int **matriz) {
+      |             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[Kbanker.c:11:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kaloca_matriz[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-function-Wunused-function]8;;[m[K]
+   11 | static int **[01;35m[Kaloca_matriz[m[K(int linhas, int colunas) {
+      |              [01;35m[K^~~~~~~~~~~~[m[K
+[01m[Kbanker.c:9:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kmaximum[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+    9 | static int **[01;35m[Kmaximum[m[K, **allocation, **need;
+      |              [01;35m[K^~~~~~~[m[K
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7m./banker 10 abc 7[27m./banker 10 abc 7
+[?2004l]133;C\]666;vte.shell.preexec!\Erro: argumento inválido "abc": deve ser um inteiro entre 0 e 2147483647
+]666;vte.shell.postexec=1\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgit add banker.c[27m
+[7mgit commit -m "le_argumentos e converte_inteiro: validação dos argumentos"[27m
+[7mgit push[27m[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git add banker.c
+git commit -m "le_argumentos e converte_inteiro: validação dos argumentos"
+git push
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\[main d758df4] le_argumentos e converte_inteiro: validação dos argumentos
+ 1 file changed, 31 insertions(+)
+]133;C\]666;vte.shell.preexec!\Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 791 bytes | 791.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/brncluis/infrasw-banker.git
+   faa1518..d758df4  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ,[Kmake clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ ./banker [K[K[K[K[K[K[K[K[K[7mprintf 'customer.txt\ncommands.txt\n' >> .gitignore[27mprintf 'customer.txt\ncommands.txt\n' >> .gitignore
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mmake[27m
+[7mprintf '7,5,3\n3,2,2\n9,0,2\n2,2,2\n4,3,3\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,3\n3,2,2\n\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,3\r\n3,2,2\r\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,3,\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,,5\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7, 5,3\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,a\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '20,0,0\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,3\n\n3,2,2\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '' > customer.txt && ./banker 10 5 7[27m
+[7mrm customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,3\n3,2,2\n9,0,2\n2,2,2\n4,3,3\n' > customer.txt[27m[A[A[A[A[A[A[A[A[A[A[A[A[Amake
+printf '7,5,3\n3,2,2\n9,0,2\n2,2,2\n4,3,3\n' > customer.txt && ./banker 10 5 7
+printf '7,5,3\n3,2,2\n\n' > customer.txt && ./banker 10 5 7
+printf '7,5,3\r\n3,2,2\r\n' > customer.txt && ./banker 10 5 7
+printf '7,5\n' > customer.txt && ./banker 10 5 7
+printf '7,5,3,\n' > customer.txt && ./banker 10 5 7
+printf '7,,5\n' > customer.txt && ./banker 10 5 7
+printf '7, 5,3\n' > customer.txt && ./banker 10 5 7
+printf '7,5,a\n' > customer.txt && ./banker 10 5 7
+printf '20,0,0\n' > customer.txt && ./banker 10 5 7
+printf '7,5,3\n\n3,2,2\n' > customer.txt && ./banker 10 5 7
+printf '' > customer.txt && ./banker 10 5 7
+rm customer.txt && ./banker 10 5 7
+printf '7,5,3\n3,2,2\n9,0,2\n2,2,2\n4,3,3\n' > customer.txt
+[?2004l]133;C\]666;vte.shell.preexec!\make: 'banker' is up to date.
+]133;C\]666;vte.shell.preexec!\n = 5, m = 3
+7 5 3 | 0 0 0 | 7 5 3 
+3 2 2 | 0 0 0 | 3 2 2 
+9 0 2 | 0 0 0 | 9 0 2 
+2 2 2 | 0 0 0 | 2 2 2 
+4 3 3 | 0 0 0 | 4 3 3 
+]133;C\]666;vte.shell.preexec!\n = 2, m = 3
+7 5 3 | 0 0 0 | 7 5 3 
+3 2 2 | 0 0 0 | 3 2 2 
+]133;C\]666;vte.shell.preexec!\n = 2, m = 3
+7 5 3 | 0 0 0 | 7 5 3 
+3 2 2 | 0 0 0 | 3 2 2 
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: 2 valores, mas foram informados 3 recursos na linha de comando
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: 4 valores, mas foram informados 3 recursos na linha de comando
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: formato inválido (esperado inteiros não negativos separados por vírgula)
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: formato inválido (esperado inteiros não negativos separados por vírgula)
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: formato inválido (esperado inteiros não negativos separados por vírgula)
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: máximo 20 do recurso 0 excede o total do sistema (10)
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 3: linha em branco no meio do arquivo
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt está vazio
+]133;C\]666;vte.shell.preexec!\Erro: não foi possível abrir customer.txt: No such file or directory
+]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mmake[27m
+[7m./banker 10 5 7[27m[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+./banker 10 5 7
+[?2004l]133;C\]666;vte.shell.preexec!\make: 'banker' is up to date.
+]133;C\]666;vte.shell.preexec!\n = 5, m = 3
+7 5 3 | 0 0 0 | 7 5 3 
+3 2 2 | 0 0 0 | 3 2 2 
+9 0 2 | 0 0 0 | 9 0 2 
+2 2 2 | 0 0 0 | 2 2 2 
+4 3 3 | 0 0 0 | 4 3 3 
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mprintf '7,5,3\n3,2,2\n\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,3\r\n3,2,2\r\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,3,\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,,5\n' > customer.txt && ./banker 10 5 7[27m
+[7mprintf '7,5,3\n3,2,2\n9,0,2\n2,2,2\n4,3,3\n' > customer.txt[27m[A[A[A[A[Aprintf '7,5,3\n3,2,2\n\n' > customer.txt && ./banker 10 5 7
+printf '7,5,3\r\n3,2,2\r\n' > customer.txt && ./banker 10 5 7
+printf '7,5\n' > customer.txt && ./banker 10 5 7
+printf '7,5,3,\n' > customer.txt && ./banker 10 5 7
+printf '7,,5\n' > customer.txt && ./banker 10 5 7
+printf '7,5,3\n3,2,2\n9,0,2\n2,2,2\n4,3,3\n' > customer.txt
+[?2004l]133;C\]666;vte.shell.preexec!\n = 2, m = 3
+7 5 3 | 0 0 0 | 7 5 3 
+3 2 2 | 0 0 0 | 3 2 2 
+]133;C\]666;vte.shell.preexec!\n = 2, m = 3
+7 5 3 | 0 0 0 | 7 5 3 
+3 2 2 | 0 0 0 | 3 2 2 
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: 2 valores, mas foram informados 3 recursos na linha de comando
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: 4 valores, mas foram informados 3 recursos na linha de comando
+]133;C\]666;vte.shell.preexec!\Erro: customer.txt, linha 1: formato inválido (esperado inteiros não negativos separados por vírgula)
+]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgit add banker.c .gitignore[27m
+[7mgit commit -m "le_clientes: leitura e validação do customer.txt"[27m
+[7mgit push[27m[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git add banker.c .gitignore
+git commit -m "le_clientes: leitura e validação do customer.txt"
+git push
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\[main 8e9a383] le_clientes: leitura e validação do customer.txt
+ 2 files changed, 118 insertions(+), 32 deletions(-)
+]133;C\]666;vte.shell.preexec!\Enumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 1.63 KiB | 1.63 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/brncluis/infrasw-banker.git
+   d758df4..8e9a383  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f banker
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mprintf 'RQ 0 0 2 1\nRQ 2 3 0 2\nRQ 1 2 0 0\nRQ 4 0 0 2\nRL 0 0 1 1\nRQ 3 2 1 1\n*\nRQ 4 4[27m[7m [27m[7m0 0\nRQ 1 1 0 2\nRQ 0 0 2 0\nRQ 2 0 1 0\n' > commands.txt && ./banker 10 5 7[27m[Aprintf 'RQ 0 0 2 1\nRQ 2 3 0 2\nRQ 1 2 0 0\nRQ 4 0 0 2\nRL 0 0 1 1\nRQ 3 2 1 1\n*\nRQ 4 4 0 0\nRQ 1 1 0 2\nRQ 0 0 2 0\nRQ 2 0 1 0\n' > commands.txt && ./banker 10 5 7
+[?2004l]133;C\]666;vte.shell.preexec!\n = 5, m = 3, comandos = 11
+RQ 0 0 2 1
+RQ 2 3 0 2
+RQ 1 2 0 0
+RQ 4 0 0 2
+RL 0 0 1 1
+RQ 3 2 1 1
+*
+RQ 4 4 0 0
+RQ 1 1 0 2
+RQ 0 0 2 0
+RQ 2 0 1 0
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mprintf 'XX 0 1 0 0\n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf 'rq 0 1 0 0\n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf 'RQ 0 1 0\n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf 'RQ 0 1 0 0 \n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf 'RQ 9 1 0 0\n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf 'RL 0 -3 0 0\n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf 'RQ 0 1 a 0\n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf '* \n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf 'RQ 0 1 0 0\n\n*\n' > commands.txt && ./banker 10 5 7[27m
+[7mprintf '' > commands.txt && ./banker 10 5 7[27m
+[7mrm commands.txt && ./banker 10 5 7[27m
+[7mprintf 'RQ 0 0 2 1\nRQ 2 3 0 2\nRQ 1 2 0 0\nRQ 4 0 0 2\nRL 0 0 1 1\nRQ 3 2 1 1\n*\nRQ 4 4 0 0\nRQ 1 1 0 2\nRQ 0 0 2 0\nRQ 2 0 1 0\n' > command[27m[7ms[27m[7m.txt[27m[A[A[A[A[A[A[A[A[A[A[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ printf 'XX 0 1 0 0\n' > commands.txt && ./banker 10 5 7
+printf 'rq 0 1 0 0\n' > commands.txt && ./banker 10 5 7
+printf 'RQ 0 1 0\n' > commands.txt && ./banker 10 5 7
+printf 'RQ 0 1 0 0 \n' > commands.txt && ./banker 10 5 7
+printf 'RQ 9 1 0 0\n' > commands.txt && ./banker 10 5 7
+printf 'RL 0 -3 0 0\n' > commands.txt && ./banker 10 5 7
+printf 'RQ 0 1 a 0\n' > commands.txt && ./banker 10 5 7
+printf '* \n' > commands.txt && ./banker 10 5 7
+printf 'RQ 0 1 0 0\n\n*\n' > commands.txt && ./banker 10 5 7
+printf '' > commands.txt && ./banker 10 5 7
+rm commands.txt && ./banker 10 5 7
+printf 'RQ 0 0 2 1\nRQ 2 3 0 2\nRQ 1 2 0 0\nRQ 4 0 0 2\nRL 0 0 1 1\nRQ 3 2 1 1\n*\nRQ 4 4 0 0\nRQ 1 1 0 2\nRQ 0 0 2 0\nRQ 2 0 1 0\n' > commands.txt
+[?2004l]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: comando inválido "XX 0 1 0 0" (esperado RQ, RL ou *)
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: comando inválido "rq 0 1 0 0" (esperado RQ, RL ou *)
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: 2 valores, mas foram informados 3 recursos na linha de comando
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: 4 valores, mas foram informados 3 recursos na linha de comando
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: cliente 9 não existe (há 5 clientes, de 0 a 4)
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: formato inválido (esperado inteiros não negativos separados por um espaço)
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: formato inválido (esperado inteiros não negativos separados por um espaço)
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: comando inválido "* " (esperado RQ, RL ou *)
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 3: linha em branco no meio do arquivo
+]133;C\]666;vte.shell.preexec!\Erro: commands.txt está vazio
+]133;C\]666;vte.shell.preexec!\Erro: não foi possível abrir commands.txt: No such file or directory
+]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgit add banker.c[27m
+[7mgit commit -m "le_comandos: leitura e validação do commands.txt"[27m
+[7mgit push[27m[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git add banker.c
+git commit -m "le_comandos: leitura e validação do commands.txt"
+git push
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\[main 0c0fb02] le_comandos: leitura e validação do commands.txt
+ 1 file changed, 113 insertions(+), 19 deletions(-)
+]133;C\]666;vte.shell.preexec!\Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 1.27 KiB | 1.27 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/brncluis/infrasw-banker.git
+   8e9a383..0c0fb02  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mmake[27m
+[7m./banker 10 5 7[27m
+[7mls result.txt[27m
+[7mprintf 'XX\n' > commands.txt[27m
+[7m./banker 10 5 7[27m
+[7mls result.txt[27m
+[7mprintf 'RQ 0 0 2 1\nRQ 2 3 0 2\nRQ 1 2 0 0\nRQ 4 0 0 2\nRL 0 0 1 1\nRQ 3 2 1 1\n*\nRQ 4 4 0 0\nRQ 1 1 0 2\nRQ 0 0 2 0\nRQ 2 0 1 0\n' > command[27m[7ms[27m[7m.txt[27m[A[A[A[A[A[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+./banker 10 5 7
+ls result.txt
+printf 'XX\n' > commands.txt
+./banker 10 5 7
+ls result.txt
+printf 'RQ 0 0 2 1\nRQ 2 3 0 2\nRQ 1 2 0 0\nRQ 4 0 0 2\nRL 0 0 1 1\nRQ 3 2 1 1\n*\nRQ 4 4 0 0\nRQ 1 1 0 2\nRQ 0 0 2 0\nRQ 2 0 1 0\n' > commands.txt
+[?2004l]133;C\]666;vte.shell.preexec!\make: 'banker' is up to date.
+]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\result.txt
+]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: comando inválido "XX" (esperado RQ, RL ou *)
+]133;C\]666;vte.shell.preexec!\result.txt
+]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mmake[27m
+[7m./banker 10 5 7[27m
+[7mls result.txt[27m
+[7mprintf 'XX\n' > commands.txt[27m
+[7m./banker 10 5 7[27m
+[7mls result.txt[27m
+[7mprintf 'RQ 0 0 2 1\nRQ 2 3 0 2\nRQ 1 2 0 0\nRQ 4 0 0 2\nRL 0 0 1 1\nRQ 3 2 1 1\n*\nRQ 4 4 0 0\nRQ 1 1 0 2\nRQ 0 0 2 0\nRQ 2 0 1 0\n' > command[27m[7ms[27m[7m.txt[27m[A[A[A[A[A[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ make
+./banker 10 5 7
+ls result.txt
+printf 'XX\n' > commands.txt
+./banker 10 5 7
+ls result.txt
+printf 'RQ 0 0 2 1\nRQ 2 3 0 2\nRQ 1 2 0 0\nRQ 4 0 0 2\nRL 0 0 1 1\nRQ 3 2 1 1\n*\nRQ 4 4 0 0\nRQ 1 1 0 2\nRQ 0 0 2 0\nRQ 2 0 1 0\n' > commands.txt
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -std=c99 -pedantic -g -o banker banker.c
+]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\result.txt
+]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\Erro: commands.txt, linha 1: comando inválido "XX" (esperado RQ, RL ou *)
+]133;C\]666;vte.shell.preexec!\ls: cannot access 'result.txt': No such file or directory
+]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7mgit add banker.c .gitignore[27m
+[7mgit commit -m "execução dos comandos, saída no result.txt e main final"[27m
+[7mgit push[27m[A[A]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git add banker.c .gitignore
+git commit -m "execução dos comandos, saída no result.txt e main final"
+[1Pgit pus[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kida no result.txt e naub [K[K[K[K[Kmain final"
+[?2004l]133;C\]666;vte.shell.preexec!\]133;C\]666;vte.shell.preexec!\[main 26058e2] execução dos comandos, saida no result.txt e main final
+ 1 file changed, 85 insertions(+), 10 deletions(-)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ git push
+[?2004l]133;C\]666;vte.shell.preexec!\Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 1.20 KiB | 1.20 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/brncluis/infrasw-banker.git
+   0c0fb02..26058e2  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Desktop/infrasw-banker/lhass\]0;brncluis@luisdesktop:~/Desktop/infrasw-banker/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Desktop/infrasw-banker/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Desktop/infrasw-banker/lhass[00m$ [7m./build/exorbita[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./build/exorbita
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit
+[?2004l]133;C\]666;vte.shell.preexec!\exit
+
+Script done on 2026-11-16 17:18:58-03:00 [COMMAND_EXIT_CODE="0"]
