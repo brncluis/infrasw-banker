@@ -54,6 +54,6 @@ diff result.txt esperado.txt
 
 Sem diferença impressa, a saída bate com o esperado. Na linha de recursos insuficientes, o programa imprime `3 3 2`, e não o `3 2 2` do PDF: com `./banker 10 5 7`, a soma da coluna ALLOCATION é `7 2 5`, e `10 5 7 − 7 2 5 = 3 3 2`.
 
-Pedidos negados (maior que o máximo, recursos insuficientes, estado inseguro ou devolução maior que o alocado) não são erros: geram uma linha no `result.txt` e a execução continua.
+Pedidos negados (maior que o máximo, recursos insuficientes ou estado inseguro) não são erros: geram uma linha no result.txt e a execução continua.
 
 Casos de entrada inválida (nenhum argumento, argumento que não é inteiro não negativo, `customer.txt` ou `commands.txt` inexistente ou vazio, número de valores diferente do número de recursos, formato malformado, comando desconhecido, cliente inexistente ou máximo maior que o total do sistema) devem ser rejeitados com mensagem de erro em stderr, código de saída diferente de zero, e sem gerar nenhum `result.txt`.

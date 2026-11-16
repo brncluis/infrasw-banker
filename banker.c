@@ -373,7 +373,7 @@ static void imprime_estado(FILE *saida) {
     fprintf(saida, "\n");
 }
 
-static void executa_comandos(FILE *saida) {
+static bool executa_comandos(FILE *saida) {
     for (int c = 0; c < total_comandos; c++) {
         int  cliente = cliente_comando[c];
         int *valores = valores_comando[c];
@@ -384,14 +384,16 @@ static void executa_comandos(FILE *saida) {
         }
 
         if (tipo_comando[c] == 'L') {
-            if (release_resources(cliente, valores) == 0) {
-                fprintf(saida, "Release from customer %d the resources ", cliente);
-                escreve_vetor(saida, valores);
-            } else {
-                fprintf(saida, "The customer %d release ", cliente);
-                escreve_vetor(saida, valores);
-                fprintf(saida, " was denied because exceed its allocation");
+            if (release_resources(cliente, valores) != 0) {
+                fprintf(stderr, "Erro: commands.txt, linha %d: o cliente %d tenta liberar ", c + 1, cliente);
+                escreve_vetor(stderr, valores);
+                fprintf(stderr, ", mas tem alocado ");
+                escreve_vetor(stderr, allocation[cliente]);
+                fprintf(stderr, "\n");
+                return false;
             }
+            fprintf(saida, "Release from customer %d the resources ", cliente);
+            escreve_vetor(saida, valores);
             fprintf(saida, "\n");
             continue;
         }
@@ -416,6 +418,7 @@ static void executa_comandos(FILE *saida) {
         }
         fprintf(saida, "\n");
     }
+    return true;
 }
 
 int main(int argc, char *argv[]) {
@@ -430,8 +433,10 @@ int main(int argc, char *argv[]) {
             fprintf(stderr, "Erro: não foi possível criar result.txt: %s\n", strerror(errno));
             ok = false;
         } else {
-            executa_comandos(saida);
+            ok = executa_comandos(saida);
             fclose(saida);
+            if (!ok)
+                remove("result.txt");
         }
     }
 
